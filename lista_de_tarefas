@@ -1,0 +1,57 @@
+# Lista do que fazer...
+
+- [ ] Encontrar o tamanho maximo que pode ser alocado dinamicamente (long int)
+- [ ] Encontrar 25 faixas de tamanho para realizar o teste
+- [ ] Organização das amostras:
+ - [ ] Valores pseudo aleatorios (em qualquer ordem)
+ - [ ] Valores em ordem nao decrescente
+ - Obs: Em ambos os casos, podem haver valores repetidos
+- [ ] Resultados da busca:
+ - [ ] Pior caso (quando k não está no vetor)
+ - [ ] Quando k encontra-se distante 3/4 do comprimento de A
+ - [ ] A terceira ocorrencia de k no arranjo (se existir)
+- [ ] Algoritmos:
+ - [x] busca sequencial interativa
+ - [x] busca sequencial recursiva
+ - [x] busca sequencial padrão (std::search -> algorithm)
+ - [x] busca binária interativa                          // Apenas em arranjos ordenados
+ - [x] busca binária recursiva                           // Apenas em arranjos ordenados
+ - [x] busca binária padrão (std::bsearch -> cstdlib)    // Apenas em arranjos ordenados
+ - [x] busca ternária interativa                         // Apenas em arranjos ordenados
+ - [x] busca ternária recursiva                          // Apenas em arranjos ordenados
+- [ ] Adaptações:
+ - [ ] fazer as funções retornarem a 3º ocorrencia (chama a funcao mais 2 vezes com os parametros adequados)
+ - [ ] incluir um parametro i, para determinada ocorrencia (i = 0 -> primeira, i = 1 -> segunda...)
+- [x] Criação de wrappers:
+ - [x] Criar uma nova função para chamar as funções std::search e std::bsearch
+- [ ] Armazenar as 8 funções (item 5) em um vetor de ponteiros para função (por isso o wrapper), com a mesma assinatura
+- [ ] Receber por linha de comando um valor k, limite de amostras a serem testadas (num_Amostras = 2^i, com i ∈ [5, k+5])
+- [ ] Gerar um arquivo .dat com os dados para serem plotados no gnuplot
+- [ ] Armazenar o valor de 100 execuções para cada instância (gerando a média progressiva)
+- [ ] Não alocar os vetores a cada execução, mas alocar uma unica vez com o tamanho máximo
+- [ ] Gerar um gráfico (n x tempo) para cada algoritmo
+- [ ] Criação do relatório:
+ - [ ] Introdução com o propósito do relatório
+ - [ ] Método
+  - [ ] Materiais
+   - [ ] Configurações da máquina utilizada (processador, memória, placa mãe)
+   - [ ] Linguagem de programação
+   - [ ] Tipo e versão do SO
+   - [ ] Tipo e versão do compilador
+   - [ ] Lista dos algoritmos utilizados (com o código)
+   - [ ] Cenários considerados
+  - [ ] Metodologia
+   - [ ] Descrição do método ou procedimento empregado para a geração dos dados
+   - [ ] Quais e como as medições foram tomadas para comparação (tempo, passos, memória...)
+  - [ ] Resultados Alcançados (Gŕaficos e Tabelas)
+  - [ ] Discussão dos Resultados
+   - [ ] O que foi descoberto
+   - [ ] Quais algoritmos são recomendados para quais cenários
+   - [ ] Existe um ganho em termos de processamento se dividirmos o arranjo em 3 partes?
+    - [ ] Se sim, por que não continuar dividindo-o?
+   - [ ] Aconteceu algo inesperado nas medições? (picos ou vales nos gráficos) Por que?
+   - [ ] Que função matemática melhor se aproxima para descrever o gráfico gerado?
+   - [ ] É possível estimar o tempo necessário para cada algoritmo executar com 100 milhões de elementos?
+   - [ ] A análise empírica é compatível com a análise matemática?
+- [ ] Entrega
+ - [ ] Um arquivo compactado contendo as pastas do projeto e o PDF com o relatório técnico

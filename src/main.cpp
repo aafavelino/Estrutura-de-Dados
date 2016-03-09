@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include <random>
+#include <string>
 #include "functions.h"
 
 
@@ -20,20 +21,19 @@
   		
  			srand(time(NULL));
 
-			int vetor[10]; //= {1,1,1,1,1,1,1,1,1,1};
+			int vetor[]= {1,1,1,2,2,2,3,4,4,4,5,6};
 		
-		   for (int i = 0; i < 10; ++i){
+		   /* for (int i = 0; i < 10; ++i){
 			    vetor[i] = i;//rand() % 1000;
 			         
-			}
-
+			}*/
 
 		//	std::sort(begin(vetor), end(vetor)); //Ordenar...
 			 
 
 
 
-		    for (int i = 0; i < 10; ++i){
+		    for (int i = 0; i < 12; ++i){
 			    cout << " " <<  vetor[i];//rand() % 100;
 
 			}
@@ -47,11 +47,10 @@
 
     inicio = std::chrono::system_clock::now();
 
- 
 
 
+			 cout << wrapper_bsearch(vetor,3,0,12, 1);
 		
-		cout << busca_sequencial_recursiva(vetor,4,0,10);
 		
 
     fim = std::chrono::system_clock::now();

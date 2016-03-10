@@ -29,8 +29,8 @@ template <typename Obj, typename Obj2>
 template <typename Obj, typename Obj2>
 	int busca_ternaria_iterativa( Obj &V, Obj2 x, int e, int d, int k);
 
-template <typename C>
-	int compara_search(const C& V, const C& b);
+template<typename C>
+	int compara_search( const C& v1, const C& v2, int k);
 
 #include "functions.inl"
 

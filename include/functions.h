@@ -16,7 +16,7 @@ template <typename Obj, typename Obj2>
 	long int busca_ternaria_recursiva(Obj &vetor, Obj2 x, int e, int d, int k);
 	
 	int compare(const void *x, const void *y);
-
+	
 	//IRENE...
 template <typename Obj, typename Obj2>
 	int busca_binaria_recursiva( Obj &vetor, Obj2 x, int e, int d, int k);

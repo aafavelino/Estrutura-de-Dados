@@ -1,11 +1,26 @@
 template <typename Obj, typename Obj2>
 	int wrapper_bsearch(Obj vetor, Obj2 x, int e, int d, int k){
+		int aux;
 		Obj p1 = (Obj) std::bsearch(&x, vetor, d-e, sizeof(*vetor) , compare);
-		    if(p1 == 0)
+		    if(p1 == 0){
 		    	return -1;
-		    else
+		    }else{ 
+		    	if(k==1){
+		    		for (int i = (p1 - &vetor[0]); i >= 0; i--)
+		    		{	
+		    			if (x == vetor [i])
+		    				aux = i;
+		    			printf("\n%s %d %d\n","teste", aux, vetor[i]);
+		    		}
+		    		if (x == vetor [aux+2])
+		    		{
+		    			return aux+2;
+		    		}else{
+		    			return 0;
+		    		}
+		    	}
 		    	return p1 - &vetor[0];
-
+		    }
 	}
 
 template <typename Obj, typename Obj2>
@@ -216,72 +231,72 @@ void randomFill( std::vector<int> &V, const int lower, const int upper, const un
 }
 
 template <typename Obj, typename Obj2>
-	int busca_ternaria_iterativa( Obj &V, Obj2 x, int e, int d, int k){
-	    int met, met1, aux = 0;
+	int busca_ternaria_iterativa( Obj &vetor, Obj2 x, int e, int d, int k){
+	    int t1, t2, aux = 0;
 	    while (e <= d){
-			met = (d - e)/3 + e;
-			met1 = ((d - e)/3) *2 + e; 
-			if (x==V[met]){
+			t1 = (d - e)/3 + e;
+			t2 = ((d - e)/3) *2 + e; 
+			if (x==vetor[t1]){
 					if (k==1) {
-								if (x == V[met-1])
+								if (x == vetor[t1-1])
 								{
 								
-									for (int i = met-1; i >= 0; i--)
+									for (int i = t1-1; i >= 0; i--)
 									{
 										
-										if (x == V[i])
+										if (x == vetor[i])
 										{
 											aux = i;
 										}
 									
 										
 								}
-									return x == V[aux+2] ? aux+2: 0;
+									return x == vetor[aux+2] ? aux+2: 0;
 						}else{
-							return x == V[met+2] ? met+2: 0;
+							return x == vetor[t1+2] ? t1+2: 0;
 						}
 
 					}
 
-				return met;
+				return t1;
 			}
-			if (x == V[met1])
+			if (x == vetor[t2])
 			{
 					if (k==1) {
-								if (x == V[met1-1])
+								if (x == vetor[t2-1])
 								{
 								
-									for (int i = met1-1; i >= 0; i--)
+									for (int i = t2-1; i >= 0; i--)
 									{
 										
-										if (x == V[i])
+										if (x == vetor[i])
 										{
 											aux = i;
 										}
 									
 										
 								}
-									return x == V[aux+2] ? aux+2: 0;
+									return x == vetor[aux+2] ? aux+2: 0;
 						}else{
-							return x == V[met1+2] ? met1+2: 0;
+							return x == vetor[t2+2] ? t2+2: 0;
 						}
 
 					}
-				return met1;
+				return t2;
 			}
-			 if (x<V[met])
+			 if (x<vetor[t1])
 			{	
-	        d = met-1;   
+	        d = t1-1;   
 			}
-			else if ((x > V[met]) && (x < V[met1]))
+			else if ((x > vetor[t1]) && (x < vetor[t2]))
 			{
-			e  = met + 1;
-	        d = met1-1;
+			e  = t1 + 1;
+	        d = t2-1;
 
 			}
-			else if (x>V[met1])
+			else if (x>vetor[t2])
 			{
-	         e = met1 +1;
+	         e = t2 +1;
 
 			}
 				

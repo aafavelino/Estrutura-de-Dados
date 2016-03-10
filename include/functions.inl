@@ -4,10 +4,10 @@ template <typename Obj, typename Obj2>
 		Obj p1 = (Obj) std::bsearch(&x, vetor, d-e, sizeof(*vetor) , compare);
 		    if(p1 == 0){
 		    	return -1;
-		    }else{ 
+		    }else{
 		    	if(k==1){
 		    		for (int i = (p1 - &vetor[0]); i >= 0; i--)
-		    		{	
+		    		{
 		    			if (x == vetor [i])
 		    				aux = i;
 		    		}
@@ -35,13 +35,13 @@ template <typename Obj, typename Obj2>
 					return aux;
 			}
 		}
-		return -1;	
+		return -1;
 	}
 
 template <typename Obj, typename Obj2>
 	long int busca_binaria_iterativa(Obj &vetor, Obj2 x, int e, int d,int k){
 		int aux = 0;
-	
+
 		while(e <= d){
 
 		Obj2 n = (e + d)/2;
@@ -50,16 +50,16 @@ template <typename Obj, typename Obj2>
 			if (k==1) {
 					if (x == vetor[n-1])
 					{
-					
+
 						for (int i = n-1; i >= 0; i--)
 						{
-							
+
 							if (x == vetor[i])
 							{
 								aux = i;
 							}
-						
-							
+
+
 					}
 						return x == vetor[aux+2] ? aux+2: 0;
 			}else{
@@ -74,9 +74,9 @@ template <typename Obj, typename Obj2>
 			e = n + 1;
 		else
 			d = n - 1;
-		
 
-		
+
+
 	}
 	return -1;
 }
@@ -89,23 +89,23 @@ template <typename Obj, typename Obj2>
 		int aux = 0;
 
 		Obj2 t1 = (d-e)/3 + e;
-		
+
 		Obj2 t2 = ((d-e)/3) * 2 + e;
 
 		if(x == vetor[t1]){
 			if (k==1) {
 						if (x == vetor[t1-1])
 						{
-						
+
 							for (int i = t1-1; i >= 0; i--)
 							{
-								
+
 								if (x == vetor[i])
 								{
 									aux = i;
 								}
-							
-								
+
+
 						}
 							return x == vetor[aux+2] ? aux+2: 0;
 				}else{
@@ -119,16 +119,16 @@ template <typename Obj, typename Obj2>
 			if (k==1) {
 						if (x == vetor[t2-1])
 						{
-						
+
 							for (int i = t2-1; i >= 0; i--)
 							{
-								
+
 								if (x == vetor[i])
 								{
 									aux = i;
 								}
-							
-								
+
+
 						}
 							return x == vetor[aux+2] ? aux+2: 0;
 				}else{
@@ -155,26 +155,26 @@ template <typename Obj, typename Obj2>
 template <typename Obj, typename Obj2>
 	int busca_binaria_recursiva( Obj &vetor, Obj2 x, int e, int d, int k){
 		int aux = 0;
-		
-	    if (e > d  ) 
-	        return -1; 
+
+	    if (e > d  )
+	        return -1;
 
 	    int n = ( e + d ) / 2;
-	
+
 	   	if(x == vetor[n]){
 			if (k==1) {
 						if (x == vetor[n-1])
 						{
-						
+
 							for (int i = n-1; i >= 0; i--)
 							{
-								
+
 								if (x == vetor[i])
 								{
 									aux = i;
 								}
-							
-								
+
+
 						}
 							return x == vetor[aux+2] ? aux+2: 0;
 				}else{
@@ -184,11 +184,11 @@ template <typename Obj, typename Obj2>
 			}
 			return n;
 	    }
-	    else if ( x > vetor[n] ) 
+	    else if ( x > vetor[n] )
 	    {
 	        return busca_binaria_recursiva( vetor, x, n+1, d, k);
 	    }
-	    else 
+	    else
 	    {
 	        return busca_binaria_recursiva( vetor, x, e, n-1, k);
 	    }
@@ -220,7 +220,7 @@ template <typename Obj, typename Obj2>
 
 void randomFill( std::vector<int> &V, const int lower, const int upper, const unsigned int seed) {
 
- 
+
     std::default_random_engine eng(seed);
     std::uniform_real_distribution<double> distr(lower, upper);
 
@@ -234,21 +234,21 @@ template <typename Obj, typename Obj2>
 	    int t1, t2, aux = 0;
 	    while (e <= d){
 			t1 = (d - e)/3 + e;
-			t2 = ((d - e)/3) *2 + e; 
+			t2 = ((d - e)/3) *2 + e;
 			if (x==vetor[t1]){
 					if (k==1) {
 								if (x == vetor[t1-1])
 								{
-								
+
 									for (int i = t1-1; i >= 0; i--)
 									{
-										
+
 										if (x == vetor[i])
 										{
 											aux = i;
 										}
-									
-										
+
+
 								}
 									return x == vetor[aux+2] ? aux+2: 0;
 						}else{
@@ -264,16 +264,16 @@ template <typename Obj, typename Obj2>
 					if (k==1) {
 								if (x == vetor[t2-1])
 								{
-								
+
 									for (int i = t2-1; i >= 0; i--)
 									{
-										
+
 										if (x == vetor[i])
 										{
 											aux = i;
 										}
-									
-										
+
+
 								}
 									return x == vetor[aux+2] ? aux+2: 0;
 						}else{
@@ -284,8 +284,8 @@ template <typename Obj, typename Obj2>
 				return t2;
 			}
 			 if (x<vetor[t1])
-			{	
-	        d = t1-1;   
+			{
+	        d = t1-1;
 			}
 			else if ((x > vetor[t1]) && (x < vetor[t2]))
 			{
@@ -298,17 +298,37 @@ template <typename Obj, typename Obj2>
 	         e = t2 +1;
 
 			}
-				
+
 		}
 
 	  return -1;
 	}
 
-template <typename C>
-	int compara_search(const C& V, const C& b)
-	{
-	  return std::search(V.begin(), V.end(), b.begin(), b.end()) != V.end();
+template<typename C>
+int compara_search( const C& v1, const C& v2, int k)
+{
+     int t;
+     vector<int>::const_iterator it = search(v1.begin(), v1.end(), v2.begin(), v2.end());
+     vector<int>::const_iterator it1;
+    if(it != v1.end())
+    {
 
-	}
-	
+        int i = it - v1.begin();
+        if (k==1){
+        if (v1[i+1]==v1[i]){
+                for (int j=i; j < i+3 ;j++){
+                    it1 = search(v1.begin()+j, v1.end(), v2.begin(), v2.end());
+                    t = it1 - v1.begin();
+                }
+            return t;
+        }
+        return 0;
+        }
+   	return i;
+    }
+    else
+    {
+    return -1;
+    }
 
+}

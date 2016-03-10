@@ -10,7 +10,6 @@ template <typename Obj, typename Obj2>
 		    		{	
 		    			if (x == vetor [i])
 		    				aux = i;
-		    			printf("\n%s %d %d\n","teste", aux, vetor[i]);
 		    		}
 		    		if (x == vetor [aux+2])
 		    		{

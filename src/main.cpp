@@ -21,7 +21,7 @@
   		
  			srand(time(NULL));
 
-			int vetor[]= {1,1,1,2,2,2,3,4,4,4,5,6};
+			int vetor[]= {1,1,1,2,2,2,3,4,4,5,5,5};
 		
 		   /* for (int i = 0; i < 10; ++i){
 			    vetor[i] = i;//rand() % 1000;
@@ -49,7 +49,7 @@
 
 
 
-			 cout << wrapper_bsearch(vetor,3,0,12, 1);
+			 cout << wrapper_bsearch(vetor,5,0,12, 0);
 		
 		
 

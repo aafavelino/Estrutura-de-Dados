@@ -21,10 +21,9 @@
  - [x] busca ternária recursiva                          // Apenas em arranjos ordenados
 - [ ] Adaptações:
  - [x] fazer as funções retornarem a 3º ocorrencia(Falta search e bsearch)
- - [ ] incluir um parametro i, para determinada ocorrencia (i = 0 -> primeira, i = 1 -> segunda...)
 - [x] Criação de wrappers:
  - [x] Criar uma nova função para chamar as funções std::search e std::bsearch
-- [ ] Armazenar as 8 funções (item 5) em um vetor de ponteiros para função (por isso o wrapper), com a mesma assinatura
+- [x] Armazenar as 8 funções (item 5) em um vetor de ponteiros para função (por isso o wrapper), com a mesma assinatura
 - [ ] Receber por linha de comando um valor k, limite de amostras a serem testadas (num_Amostras = 2^i, com i ∈ [5, k+5])
 - [ ] Gerar um arquivo .dat com os dados para serem plotados no gnuplot
 - [ ] Armazenar o valor de 100 execuções para cada instância (gerando a média progressiva)

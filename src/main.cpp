@@ -17,29 +17,13 @@
 		int main(int argc, char const *argv[])
 		{
 
-			auto terk(0);
-
-		    if ( argc > 1 )
-		        std::stringstream( argv[1] ) >> terk;
-		    else
-		        terk = 0;
-
-
-
-
 			/*
  			 *inicializa o gerador de números randômicos
  			 */
   		
  			srand(time(NULL));
 
-			int vetor[12];
-		
-		  	for (int i = 0; i < 12; ++i){
-			    vetor[i] = rand() % 1000;
-			         
-			}
-
+			long int vetor[] = {1,1,1,2,2,2,3,3,4,5,6,7};
 
 			/*
 			 * Ordenar vetor...
@@ -55,7 +39,13 @@
 
 			}
 
-
+		long int (*p[])(long int*, long int, int ,long int, int) = {
+			busca_ternaria_iterativa, 
+			busca_ternaria_recursiva,
+			busca_sequencial_iterativa,
+			busca_binaria_iterativa,
+			busca_binaria_recursiva
+			};
 
 			
 
@@ -69,7 +59,7 @@
 
 
 
-			 cout << busca_binaria_recursiva(vetor,5,0,12, terk);
+			 cout << p[4](vetor,2,0,12, 1);
 		
 		
 

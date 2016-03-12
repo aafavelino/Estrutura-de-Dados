@@ -43,8 +43,9 @@
 			busca_ternaria_iterativa, 
 			busca_ternaria_recursiva,
 			busca_sequencial_iterativa,
+			busca_sequencial_recursiva,
 			busca_binaria_iterativa,
-			busca_binaria_recursiva
+			busca_binaria_recursiva	
 			};
 
 			
@@ -59,7 +60,7 @@
 
 
 
-			 cout << p[4](vetor,2,0,12, 1);
+			 cout << p[3](vetor,2,0,12, 0);
 		
 		
 

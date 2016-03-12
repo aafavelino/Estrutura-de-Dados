@@ -193,21 +193,25 @@ long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d
 	}
 
 
-template <typename Obj, typename Obj2>
-	long int busca_sequencial_recursiva(Obj &vetor, Obj2 x, int e, int d, Obj2 k){
 
-		int cont = 0;
-		int i;
-		int aux;
+	long int busca_sequencial_recursiva(long int vetor[], long int x, int e, long int d, int k){
+
+		long int cont = 0;
+		long int i;
+		long int aux;
 
 		for (i = e; i < d; ++i){
 			if(e > d)
 				return -1;
-			else if(x == vetor[i]){
+			if(x == vetor[i]){
 				cont++;
 				aux = i;
-				if(cont==k)
+			if(k==1){
+				if(cont==3)
 					return aux;
+			}else{
+				return aux;
+			}
 			} else
 				return busca_sequencial_recursiva(vetor, x, e + 1, d, k);
 		}

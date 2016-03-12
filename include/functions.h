@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int wrapper_bsearch(long int vetor[], long int x, int e, long int d, int k);
+template <typename Obj, typename Obj2>
+	int wrapper_bsearch(Obj vetor, Obj2 x, int e, int d, int k);
 
 long int busca_sequencial_iterativa(long int vetor[], long int x, int e, long int d, int k);
 
@@ -18,8 +19,7 @@ long int busca_binaria_recursiva( long int vetor[], long int x, int e, long int 
 
 	void randomFill( std::vector<int> &V, const int lower, const int upper, const unsigned int seed);
 
-template <typename Obj, typename Obj2>
-	long int busca_sequencial_recursiva(Obj &vetor, Obj2 x, int e, int d, Obj2 k);
+long int busca_sequencial_recursiva(long int vetor[], long int x, int e, long int d, int k);
 
 long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int d, int k);
 

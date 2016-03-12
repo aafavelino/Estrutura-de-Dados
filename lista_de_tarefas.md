@@ -20,7 +20,7 @@
  - [x] busca ternária interativa                         // Apenas em arranjos ordenados
  - [x] busca ternária recursiva                          // Apenas em arranjos ordenados
 - [ ] Adaptações:
- - [x] fazer as funções retornarem a 3º ocorrencia(Falta search e bsearch)
+ - [x] fazer as funções retornarem a 3º ocorrencia
 - [x] Criação de wrappers:
  - [x] Criar uma nova função para chamar as funções std::search e std::bsearch
 - [x] Armazenar as 8 funções (item 5) em um vetor de ponteiros para função (por isso o wrapper), com a mesma assinatura

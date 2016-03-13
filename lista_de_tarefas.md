@@ -10,7 +10,7 @@
  - [ ] Pior caso (quando k não está no vetor)
  - [ ] Quando k encontra-se distante 3/4 do comprimento de A
  - [ ] A terceira ocorrencia de k no arranjo (se existir)
-- [ ] Algoritmos:
+- [ ] Algoritmos: 
  - [x] busca sequencial interativa
  - [x] busca sequencial recursiva
  - [x] busca sequencial padrão (std::search -> algorithm)

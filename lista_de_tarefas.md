@@ -29,28 +29,28 @@
 - [x] Armazenar o valor de 100 execuções para cada instância (gerando a média progressiva)
 - [x] Não alocar os vetores a cada execução, mas alocar uma unica vez com o tamanho máximo
 - [x] Gerar um gráfico (n x tempo) para cada algoritmo
-- [ ] Criação do relatório:
- - [ ] Introdução com o propósito do relatório
- - [ ] Método
-  - [ ] Materiais
-   - [ ] Configurações da máquina utilizada (processador, memória, placa mãe)
-   - [ ] Linguagem de programação
-   - [ ] Tipo e versão do SO
-   - [ ] Tipo e versão do compilador
+- [x] Criação do relatório:
+ - [x] Introdução com o propósito do relatório
+ - [x] Método
+  - [x] Materiais
+   - [x] Configurações da máquina utilizada (processador, memória, placa mãe)
+   - [x] Linguagem de programação
+   - [x] Tipo e versão do SO
+   - [x] Tipo e versão do compilador
    - [ ] Lista dos algoritmos utilizados (com o código)
-   - [ ] Cenários considerados
-  - [ ] Metodologia
-   - [ ] Descrição do método ou procedimento empregado para a geração dos dados
-   - [ ] Quais e como as medições foram tomadas para comparação (tempo, passos, memória...)
-  - [ ] Resultados Alcançados (Gŕaficos e Tabelas)
-  - [ ] Discussão dos Resultados
-   - [ ] O que foi descoberto
-   - [ ] Quais algoritmos são recomendados para quais cenários
-   - [ ] Existe um ganho em termos de processamento se dividirmos o arranjo em 3 partes?
-    - [ ] Se sim, por que não continuar dividindo-o?
-   - [ ] Aconteceu algo inesperado nas medições? (picos ou vales nos gráficos) Por que?
-   - [ ] Que função matemática melhor se aproxima para descrever o gráfico gerado?
-   - [ ] É possível estimar o tempo necessário para cada algoritmo executar com 100 milhões de elementos?
-   - [ ] A análise empírica é compatível com a análise matemática?
-- [ ] Entrega
- - [ ] Um arquivo compactado contendo as pastas do projeto e o PDF com o relatório técnico
+   - [x] Cenários considerados
+  - [x] Metodologia
+   - [x] Descrição do método ou procedimento empregado para a geração dos dados
+   - [x] Quais e como as medições foram tomadas para comparação (tempo, passos, memória...)
+  - [x] Resultados Alcançados (Gŕaficos e Tabelas)
+  - [x] Discussão dos Resultados
+   - [x] O que foi descoberto
+   - [x] Quais algoritmos são recomendados para quais cenários
+   - [x] Existe um ganho em termos de processamento se dividirmos o arranjo em 3 partes?
+    - [x] Se sim, por que não continuar dividindo-o?
+   - [x] Aconteceu algo inesperado nas medições? (picos ou vales nos gráficos) Por que?
+   - [x] Que função matemática melhor se aproxima para descrever o gráfico gerado?
+   - [x] É possível estimar o tempo necessário para cada algoritmo executar com 100 milhões de elementos?
+   - [x] A análise empírica é compatível com a análise matemática?
+- [x] Entrega
+ - [x] Um arquivo compactado contendo as pastas do projeto e o PDF com o relatório técnico

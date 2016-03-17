@@ -194,4 +194,5 @@ for (int j = initamvet; j <= logtamvet; ++j){
 				delete []vetor;
 		  	
 			return EXIT_SUCCESS;
-		}
+			
+}

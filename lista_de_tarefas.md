@@ -1,16 +1,16 @@
 # Lista do que fazer...
 
-- [ ] Encontrar o tamanho maximo que pode ser alocado dinamicamente (long int)
-- [ ] Encontrar 25 faixas de tamanho para realizar o teste
-- [ ] Organização das amostras:
- - [ ] Valores pseudo aleatorios (em qualquer ordem)
- - [ ] Valores em ordem nao decrescente
+- [x] Encontrar o tamanho maximo que pode ser alocado dinamicamente (long int)
+- [x] Encontrar 25 faixas de tamanho para realizar o teste
+- [x] Organização das amostras:
+ - [x] Valores pseudo aleatorios (em qualquer ordem)
+ - [x] Valores em ordem nao decrescente
  - Obs: Em ambos os casos, podem haver valores repetidos
-- [ ] Resultados da busca:
- - [ ] Pior caso (quando k não está no vetor)
- - [ ] Quando k encontra-se distante 3/4 do comprimento de A
- - [ ] A terceira ocorrencia de k no arranjo (se existir)
-- [ ] Algoritmos: 
+- [x] Resultados da busca:
+ - [x] Pior caso (quando k não está no vetor)
+ - [x] Quando k encontra-se distante 3/4 do comprimento de A
+ - [x] A terceira ocorrencia de k no arranjo (se existir)
+- [x] Algoritmos: 
  - [x] busca sequencial interativa
  - [x] busca sequencial recursiva
  - [x] busca sequencial padrão (std::search -> algorithm)
@@ -19,16 +19,16 @@
  - [x] busca binária padrão (std::bsearch -> cstdlib)    // Apenas em arranjos ordenados
  - [x] busca ternária interativa                         // Apenas em arranjos ordenados
  - [x] busca ternária recursiva                          // Apenas em arranjos ordenados
-- [ ] Adaptações:
+- [x] Adaptações:
  - [x] fazer as funções retornarem a 3º ocorrencia
 - [x] Criação de wrappers:
  - [x] Criar uma nova função para chamar as funções std::search e std::bsearch
 - [x] Armazenar as 8 funções (item 5) em um vetor de ponteiros para função (por isso o wrapper), com a mesma assinatura
-- [ ] Receber por linha de comando um valor k, limite de amostras a serem testadas (num_Amostras = 2^i, com i ∈ [5, k+5])
-- [ ] Gerar um arquivo .dat com os dados para serem plotados no gnuplot
-- [ ] Armazenar o valor de 100 execuções para cada instância (gerando a média progressiva)
-- [ ] Não alocar os vetores a cada execução, mas alocar uma unica vez com o tamanho máximo
-- [ ] Gerar um gráfico (n x tempo) para cada algoritmo
+- [x] Receber por linha de comando um valor k, limite de amostras a serem testadas (num_Amostras = 2^i, com i ∈ [5, k+5])
+- [x] Gerar um arquivo .dat com os dados para serem plotados no gnuplot
+- [x] Armazenar o valor de 100 execuções para cada instância (gerando a média progressiva)
+- [x] Não alocar os vetores a cada execução, mas alocar uma unica vez com o tamanho máximo
+- [x] Gerar um gráfico (n x tempo) para cada algoritmo
 - [ ] Criação do relatório:
  - [ ] Introdução com o propósito do relatório
  - [ ] Método

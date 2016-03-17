@@ -1,12 +1,20 @@
-template <typename Obj, typename Obj2>
-	int wrapper_bsearch(Obj vetor, Obj2 x, int e, int d, int k){
+#include "functions.h"
+	/*
+	 * Em todas as funcões exite um parametro k que serve para testar o caso da terceira ocorrência no vetor, funcionando da seguinte maneira:
+	 * Ele é usado somente para as buscas binária e ternária.
+	 * A partir do momento que se encontra um número, verifica-se se antes deste número existe algum outro anterior a ele no vetor, se existir ele vai percorrer 
+	 * até que não haja mais nenhum, quando encontrar a primeira ocorrencia ele verifica se três posições na frente também há o número, se existir há uma terceira 
+	 * ocorrencia, senão retorna -1 por não encontrar o número.
+	 */
+
+	long int wrapper_bsearch(long int vetor[], long int x, int e, long int d, int k){
 		int aux;
-		Obj p1 = (Obj) std::bsearch(&x, vetor, d-e, sizeof(*vetor) , compare);
+		long p1 = (long) std::bsearch(&x, vetor, d-e, sizeof(*vetor) , compare);
 		    if(p1 == 0){
 		    	return -1;
 		    }else{
 		    	if(k==1){
-		    		for (int i = (p1 - &vetor[0]); i >= 0; i--)
+		    		for (int i = (p1 - vetor[0]); i >= 0; i--)
 		    		{
 		    			if (x == vetor [i])
 		    				aux = i;
@@ -15,10 +23,10 @@ template <typename Obj, typename Obj2>
 		    		{
 		    			return aux+2;
 		    		}else{
-		    			return 0;
+		    			return -1;
 		    		}
 		    	}
-		    	return p1 - &vetor[0];
+		    	return p1 - vetor[0];
 		    }
 	}
 
@@ -42,7 +50,7 @@ long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d
 		while(e <= d){
 
 		long int n = (e + d)/2;
-		printf("\n>>> m: %ld\n", n );
+		
 		if(x == vetor[n]){
 			if (k==1) {
 					if (x == vetor[n-1])
@@ -128,9 +136,9 @@ long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d
 
 
 						}
-							return x == vetor[aux+2] ? aux+2: 0;
+							return x == vetor[aux+2] ? aux+2: -1;
 				}else{
-					return x == vetor[t2+2] ? t2+2: 0;
+					return x == vetor[t2+2] ? t2+2: -1;
 				}
 
 			}
@@ -148,7 +156,6 @@ long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d
 			   return  *(int*)x - *(int*)y;
 	}
 
-	//IRENE...
 
 
 	long int busca_binaria_recursiva( long int vetor[], long int x, int e, long int d, int k){
@@ -195,41 +202,20 @@ long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d
 
 
 	long int busca_sequencial_recursiva(long int vetor[], long int x, int e, long int d, int k){
-
 		long int cont = 0;
-		long int i;
-		long int aux;
-
-		for (i = e; i < d; ++i){
 			if(e > d)
 				return -1;
-			if(x == vetor[i]){
+			if(x == vetor[e]){
 				cont++;
-				aux = i;
 			if(k==1){
 				if(cont==3)
-					return aux;
-			}else{
-				return aux;
-			}
-			} else
-				return busca_sequencial_recursiva(vetor, x, e + 1, d, k);
-		}
-
+					return e;
+			}		
+			} else			
+				return busca_sequencial_recursiva(vetor, x, e + 1 , d, k);
 	}
 
 
-
-void randomFill( std::vector<int> &V, const int lower, const int upper, const unsigned int seed) {
-
-
-    std::default_random_engine eng(seed);
-    std::uniform_real_distribution<double> distr(lower, upper);
-
-    for( auto &elem : V){
-        elem = distr(eng);
-    }
-}
 
 long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int d, int k){
 	    long int t1, t2, aux = 0;
@@ -251,9 +237,9 @@ long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int
 
 
 								}
-									return x == vetor[aux+2] ? aux+2: 0;
+									return x == vetor[aux+2] ? aux+2: -1;
 						}else{
-							return x == vetor[t1+2] ? t1+2: 0;
+							return x == vetor[t1+2] ? t1+2: -1;
 						}
 
 					}
@@ -276,9 +262,9 @@ long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int
 
 
 								}
-									return x == vetor[aux+2] ? aux+2: 0;
+									return x == vetor[aux+2] ? aux+2: -1;
 						}else{
-							return x == vetor[t2+2] ? t2+2: 0;
+							return x == vetor[t2+2] ? t2+2: -1;
 						}
 
 					}
@@ -305,9 +291,9 @@ long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int
 	  return -1;
 	}
 
-template<typename C, typename C1>
-int _search( const C& vetor, const C1& x,int e, int d, int k)
-{
+
+long int _search( long int vetor[], long int x, int e, long int d, int k){
+
 	vector <int> v1;
 	vector <int> v2;
 
@@ -335,11 +321,6 @@ int _search( const C& vetor, const C1& x,int e, int d, int k)
            		else
            			return -1;
                 }
-
-
-
-        
-
    	return i;
     }
     else

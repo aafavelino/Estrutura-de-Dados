@@ -3,28 +3,59 @@
 
 using namespace std;
 
-template <typename Obj, typename Obj2>
-	int wrapper_bsearch(Obj vetor, Obj2 x, int e, int d, int k);
+	/*
+	 * >>> Wrapper para a busca binária do c++ 'bsearch' 
+	 */
+
+long int wrapper_bsearch(long int vetor[], long int x, int e, long int d, int k);
+
+	/*
+	 * >>> Algoritmo implementado para busca sequencial iterativa
+ 	 */
 
 long int busca_sequencial_iterativa(long int vetor[], long int x, int e, long int d, int k);
 
+	/*
+	 * >>> Algoritmo implementado para busca binária iterativa
+ 	 */
+
 long int busca_binaria_iterativa(long int vetor[], long int x, int e, long int d,int k);
 
+	/*
+	 * >>> Algoritmo implementado para busca ternária recursiva
+ 	 */
+
 long int busca_ternaria_recursiva(long int vetor[], long int x, int e, long int d, int k);
+
+	/*
+	 * >>> Algoritmo implementado para usar no bsearch afim de comparar retornando -1, 0 ou 1;
+ 	 */
 	
 	int compare(const void *x, const void *y);
+
+	/*
+	 * >>> Algoritmo implementado para busca binária recursiva
+ 	 */
 	
-	//IRENE...
 long int busca_binaria_recursiva( long int vetor[], long int x, int e, long int d, int k);
 
-	void randomFill( std::vector<int> &V, const int lower, const int upper, const unsigned int seed);
+	/*
+	 * >>> Algoritmo implementado para busca sequencial recursiva
+ 	 */
 
 long int busca_sequencial_recursiva(long int vetor[], long int x, int e, long int d, int k);
+	
+	/*
+	 * >>> Algoritmo implementado para busca ternária iterativa
+ 	 */
 
 long int busca_ternaria_iterativa( long int vetor[], long int x, int e, long int d, int k);
 
-template<typename C, typename C1>
-	int _search( const C& vetor, const C1& x,int e, int d, int k);
+	/*
+	 * >>> Wrapper para a busca linear do c++ 'search'
+ 	 */
+
+long int _search( long int vetor[], long int x, int e, long int d, int k);
 
 #include "functions.inl"
 

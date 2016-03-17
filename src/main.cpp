@@ -195,4 +195,4 @@ for (int j = initamvet; j <= logtamvet; ++j){
 		  	
 			return EXIT_SUCCESS;
 			
-}
+		}

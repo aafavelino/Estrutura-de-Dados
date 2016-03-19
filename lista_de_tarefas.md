@@ -37,7 +37,7 @@
    - [x] Linguagem de programação
    - [x] Tipo e versão do SO
    - [x] Tipo e versão do compilador
-   - [ ] Lista dos algoritmos utilizados (com o código)
+   - [x] Lista dos algoritmos utilizados (com o código)
    - [x] Cenários considerados
   - [x] Metodologia
    - [x] Descrição do método ou procedimento empregado para a geração dos dados
